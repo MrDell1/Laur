@@ -1,0 +1,146 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laur Estetic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+<script>
+        function initComparisons() {
+          var x, i;
+          x = document.getElementsByClassName("img-comp-overlay");
+          for (i = 0; i < x.length; i++) {
+            compareImages(x[i]);
+          }
+          function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchstop", slideFinish);
+            function slideReady(e) {
+              e.preventDefault();
+              clicked = 1;
+              window.addEventListener("mousemove", slideMove);
+              window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+              clicked = 0;
+            }
+            function slideMove(e) {
+              var pos;
+              if (clicked == 0) return false;
+              pos = getCursorPos(e)
+              if (pos < 0) pos = 0;
+              if (pos > w) pos = w;
+              slide(pos);
+            }
+            function getCursorPos(e) {
+              var a, x = 0;
+              e = e || window.event;
+              a = img.getBoundingClientRect();
+              x = e.pageX - a.left;
+              x = x - window.pageXOffset;
+              return x;
+            }
+            function slide(x) {
+              img.style.width = x + "px";
+              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+          }
+        }
+        </script>
+<body>
+    <div id="main">
+        <nav>
+            <div class="logo">
+                <div id="logo"><a href="index.html"><img src="logo1.png"></a></div>
+            </div>
+            <ul>
+                <li><a href="O_Gabinecie.html">O Gabinecie</a></li>
+                <li><a href="Oferta.html">Oferta</a></li>
+                <li><a href="">Promocje</a></li>
+                <li><a href="">Dla pacjenta</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+            <div class="tel">
+                <div id="tel">
+                    Umów wizytę<br>
+                    <span>+ 48 697 001 097</span><br>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="container">
+        <div id="title"><span>Botox</span></div>
+    <div id="botox">
+        <div style="margin: 30px">   
+           <span>Toksyna botulinowa – Botox</span> jest bezpieczną i skuteczną metodą leczenia stosowaną w medycynie od ponad 25 lat. Początkowo w okulistyce – w leczeniu zeza, w neurologii – w leczeniu kręczu karku, tików nerwowych. Od 1989 r. w medycynie estetycznej w USA. W 2002 r. Botox uzyskał akceptację FDA do korekcji zmarszczek, a w 2004 r. do leczenia nadpotliwości.
+        </div>
+        <div style="margin: 30px">
+           <span>Botox</span> jest oczyszczonym białkiem produkowanym naturalnie przez Clostridium Botulinum. Działanie toksyny botulinowej polega na czasowym zablokowaniu przewodnictwa nerwowo-mięśniowego. Mięsień po podaniu Botoxu przestaje się kurczyć, ulega relaksacji, rysy twarzy łagodnieją, istniejące zmarszczki wygładzają się, nowe nie powstają. Toksyną botulinową można<span> korygować zmarszczki dynamiczne</span> (mimiczne). Najczęściej zmarszczki mimiczne powstają na czole (mars), u nasady nosa (zmarszczki gniewu) i wokół oczu (kurze łapki).
+        </div>
+        <div style="margin: 30px">
+            Przy użyciu toksyny botulinowej można także likwidować zmarszczki szyi (spowodowane nadmiernym napięciem pasm mięśnia szerokiego szyi), zmarszczki nad górną wargą, opadające kąciki ust i tzw. granulowaną brodę.
+        </div>
+        <div style="margin: 30px">
+            Toksyna botulinowa zaczyna działać po 3-5 dniach od wstrzyknięcia, ostateczny efekt jest widoczny po 10-14 dniach. Działanie Botoxu jest całkowicie odwracalne, utrzymuje się 4-6 miesięcy. Po kolejnych zabiegach czas ten może ulec wydłużeniu. Zabiegi można wykonywać nie częściej niż 3 razy w roku. Częstsze wykonywanie zabiegów może doprowadzić do wytworzenia przeciwciał przeciw toksynie i do braku efektów działania.
+        </div>
+        <div style="margin: 30px">
+             Toksyna botulinowa znalazła również zastosowanie w leczeniu <span>nadmiernej potliwości</span> rąk, stóp i dołów pachowych. Wykorzystywane jest tu czasowe blokowanie przewodnictwa nerwowo-mięśniowego, impuls nerwowy nie dociera do gruczołów potowych, pot nie wydziela się. Po zabiegach wykonywanych u osób z nadpotliwością zauważono dłuższe okresy działania botuliny, nawet do 12 miesięcy.
+        </div>
+    </div>
+
+    <div id="comparison">
+        <div style="height: 30px">
+            <div style="float: left">Po</div>
+            <div style="float: right">Przed</div>
+        </div>
+            <div class="img-comp-container">
+                    <div class="img-comp-img">
+                      <img src="http://laur-estetic.pl/wp-content/uploads/2011/12/female-32-before.jpg" width="600" height="400">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                      <img src="http://laur-estetic.pl/wp-content/uploads/2011/12/female_32_after.jpg" width="600" height="400">
+                    </div>
+                  </div>
+    </div>
+
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div id="adres">
+                <span>Nasz adres:</span><br>
+                ul.Xxxxxx 21<br>
+                33-412 Łódź<br>
+                <br>
+                <span>Pracujemy:</span><br>
+                pn-pt od XX:XX do XX:XX
+            </div>
+            <div id="zapis">
+                    <span>Zapisy:</span><br>
+                    111 111 111<br>
+                </div>
+
+
+        </div>
+    </div>
+
+    <script>
+            initComparisons();
+    </script>
+</body>
+</html>
