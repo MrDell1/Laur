@@ -1,0 +1,393 @@
+body{
+    background-color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+#main{
+    width: 100%;
+    background-color: #6d6c6cc2;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 21vw;
+    height: 100%;
+    float: left;
+}
+
+#logo{
+    margin:auto;
+    max-width:192px;
+}
+
+#logo a::before{
+    display: block;
+    content: "";
+    height: 0!important;
+}
+
+#logo a::after{
+    display: block;
+    content: "";
+    height: 0!important;
+}
+
+nav{
+    height: 200px;
+    padding: 0;
+    max-width: 1600px;
+    margin: auto;
+}
+
+nav ul{
+    margin:auto;
+    max-width: 55vw;
+    padding-top: 10px;
+    float: left;
+}
+
+ nav li{
+     float: left;
+     margin: 0 20px 0 20px;
+     list-style-type: none;
+     font-size: 25px;
+ }
+
+nav a::before{
+    content: "";
+    display: block;
+    height:calc(50% - 25px);
+}
+
+nav a::after{
+    content: "";
+    display: block;
+    height:calc(50% - 25px);
+}   
+
+ nav a{
+     color: white;
+     transition: 0.3s;
+ }
+
+nav a:hover{
+    color: #06923c;
+}
+
+ .tel{
+     float: left;
+     width: calc(100vw - 81vw);
+     height: 100%;
+ }
+
+ #tel{
+     max-width: 250px;
+     margin: auto;
+     text-align: center;
+     padding: 50px;
+     top: 20px;
+     position: relative;
+     color: white;
+ }
+
+ #tel span{
+     color: #007a2f;
+     font-size: 25px;
+ }
+
+ #container{
+     max-width: 1600px;
+     margin: auto;
+     display: block;
+ }
+
+ #title{
+     font-size: 40px;
+     max-width: 600px;
+     margin: auto;
+     padding: 50px;
+     text-align: center;
+ }
+
+ #row{
+     margin: auto;
+     max-width: 1200px;
+     height: 23vw;
+ }
+
+ #row::before{
+    content: "";
+    display: block;
+    height:30px;
+ }
+
+ #block{
+    overflow: hidden; 
+    width: 500px;
+    margin: 0 50px 0 50px;
+    float: left;
+    z-index: 1;
+ }
+
+.zdj{
+    width: 499px;
+    height: 334px;
+    overflow: hidden;
+}
+
+ #block img{
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform: scale(1);
+    z-index: -1;
+ }
+
+ .block{
+     padding: 15px;    
+ }
+
+ .block span{
+     font-size: 25px;
+     margin: 5px;
+     padding: 5px;
+     border-left:  #6d6c6cc2 solid 5px;
+     transition: 0.3s;
+ }
+
+ #block:hover >.block span{
+    border-left:  #06923c solid 5px;
+ }
+
+ #block img:hover{
+    filter: blur(0);
+    transform: scale(1.1);
+    z-index: -1;
+ }
+
+#prom::before{
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+#prom{
+    height: 600px;
+    text-align: center;
+}
+
+#prom span{
+    font-size: 50px;
+}
+
+#promcontainer::before{
+    content: "";
+    display: block;
+    height: 80px;
+}
+
+#promcontainer{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+
+}
+
+#promcontainer ul{
+    margin: auto;
+    max-width: 1158px;
+    padding:0;
+}
+
+#promcontainer li{
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.prom{
+    float: left;
+    margin: 20px;   
+    overflow: hidden;
+}
+
+.prom img{
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform: scale(1);
+}
+
+.promzdj{
+    width: 346px;
+    height: 230px;
+    overflow: hidden;
+}
+
+.promtext{
+    float: left;
+    padding: 15px;
+}
+
+.promtext span{
+    font-size: 25px !important;
+    padding: 5px;
+    margin: 5px;    
+    border-left:  #6d6c6cc2 solid 5px;
+    transition: 0.3s;
+}
+
+.prom:hover >.promtext span{
+    border-left:  #06923c solid 5px;
+}
+
+.prom img:hover{
+    transform: scale(1.1);
+}
+
+#about{
+    text-align: center;
+}
+
+.about{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.about h{
+    font-size: 30px;
+    margin: 20px;
+}
+
+.about span{
+    color: #007a2f;
+}
+
+ #container::after{
+     content: "";
+     display: block;
+     height: 100px;
+ }
+
+ #footer{
+     color: aliceblue;
+     height: 320px;
+     background-color: #6d6c6cc2; 
+ }
+
+ .footer{
+     max-width: 1200px;
+     margin: auto;
+     padding: 80px;
+ }
+
+ .footer span{
+     font-size: 19px;
+     color: black;
+ }
+
+ #adres{
+     float: left;
+    margin: 10px;
+    padding: 5px;
+ }
+
+ #zapis{
+    float: left;
+    margin: 10px;
+    padding: 5px;
+ }
+
+  /* //////////////////////////////////////////////
+ 
+    O Gabinecie
+
+///////////////////////////////////////////////// */
+
+#lekarz{
+    float: left;
+    margin: 10px;
+}
+
+#lekarz span{
+    font-size: 25px;
+    
+}
+
+.name{
+    margin: 10px;
+    padding: 5px;
+}
+
+.desc{
+    top: 30px;
+    position: relative;
+    float: left;
+    width: 890px;
+    margin:15px;
+    padding: 10px;
+}
+
+  /* //////////////////////////////////////////////
+ 
+    Botox
+
+///////////////////////////////////////////////// */
+
+#botox{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#botox span{
+    color: #007a2f;
+}
+
+#comparison{
+    max-width: 601px;
+    margin: auto;
+}
+
+.img-comp-container {
+    position: relative;
+    height: 400px; 
+}
+  
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow:hidden;
+}
+  
+.img-comp-img img {
+    display:block;
+
+}
+
+.img-comp-slider {
+    position: absolute;
+    z-index:9;
+    cursor: ew-resize;
+    width: 40px;
+    height: 40px;
+    background-color: #007a2f;
+    opacity: 0.7;
+    border-radius: 50%;
+}
