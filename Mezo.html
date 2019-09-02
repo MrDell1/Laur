@@ -1,0 +1,145 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laur Estetic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+<script>
+        function initComparisons() {
+          var x, i;
+          x = document.getElementsByClassName("img-comp-overlay");
+          for (i = 0; i < x.length; i++) {
+            compareImages(x[i]);
+          }
+          function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchstop", slideFinish);
+            function slideReady(e) {
+              e.preventDefault();
+              clicked = 1;
+              window.addEventListener("mousemove", slideMove);
+              window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+              clicked = 0;
+            }
+            function slideMove(e) {
+              var pos;
+              if (clicked == 0) return false;
+              pos = getCursorPos(e)
+              if (pos < 0) pos = 0;
+              if (pos > w) pos = w;
+              slide(pos);
+            }
+            function getCursorPos(e) {
+              var a, x = 0;
+              e = e || window.event;
+              a = img.getBoundingClientRect();
+              x = e.pageX - a.left;
+              x = x - window.pageXOffset;
+              return x;
+            }
+            function slide(x) {
+              img.style.width = x + "px";
+              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+          }
+        }
+        </script>
+<body>
+    <div id="main">
+        <nav>
+            <div class="logo">
+                <div id="logo"><a href="index.html"><img src="logo1.png"></a></div>
+            </div>
+            <ul>
+                <li><a href="O_Gabinecie.html">O Gabinecie</a></li>
+                <li><a href="Oferta.html">Oferta</a></li>
+                <li><a href="">Promocje</a></li>
+                <li><a href="">Dla pacjenta</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+            <div class="tel">
+                <div id="tel">
+                    Umów wizytę<br>
+                    <span>+ 48 697 001 097</span><br>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="container">
+        <div id="title"><span>Mezoterapia</span></div>
+    <div id="botox">
+        <div style="margin: 30px">   
+           <span>Mezoterapia</span> jest metodą leczenia wykorzystywaną w medycynie od wielu lat. Twórcą jej jest francuski lekarz Michel Pistor. Początkowo była stosowana w leczeniu chorób neurologicznych – w leczeniu migreny, w pediatrii – w leczeniu chorób dróg oddechowych.
+        </div>
+        <div style="margin: 30px">
+            Od wielu lat stosowana w dermatologii, a obecnie najbardziej wykorzystywana w zabiegach medycyny estetycznej. Polega na podawaniu śródnaskórkowo, śródskórnie i podskórnie przy użyciu igły bardzo małych dawek substancji leczniczych, mających na celu biorewitalizację skóry czyli stymulację naturalnych procesów regeneracyjnych poprawiających nawilżenie, napięcie, jędrność i elastyczność skóry. Pozwala ominąć nieprzepuszczalną dla składników kremów barierę skórno-naskórkową. W celach estetycznych wstrzykuje się preparaty zawierające kwas hialuronowy, aminokwasy, witaminy, kwasy nukleinowe, koenzymy, mikroelementy. Wszystkie preparaty stosowane do mezoterapii skóry zarejestrowane są jako produkty lecznicze (leki).
+        </div>
+        <div style="margin: 30px">
+            <span>Zabiegi mezoterapii powinny być wykonywane seryjnie</span> np. 3-5 zabiegów co 2-3 tygodnie, a następnie 1 zabieg co kilka miesięcy.
+        </div>
+        <div style="margin: 30px">
+            Ostrzykuje się najczęściej twarz, szyję, dekolt, grzbiety rąk, a także skórę owłosioną głowy, skórę ud, łokci, ramion, pośladki.
+        </div>
+        <div style="margin: 30px">
+            Zabiegi mezoterapii znakomicie poprawiają jakość skóry, jej strukturę, rozświetlają, nawilżają, wygładzają. Mezoterapia stosowana na skórę owłosioną głowy poprawia ukrwienie i pobudza cebulki włosowe, przez to zmniejsza wypadanie włosów i wpływa na ich jakość. Stosowana na ciało pobudza spalanie tkanki tłuszczowej, działa przeciwcellulitowo i wyszczuplająco.</div>
+    </div>
+
+    <div id="comparison">
+        <div style="height: 30px">
+            <div style="float: left">Po</div>
+            <div style="float: right">Przed</div>
+        </div>
+            <div class="img-comp-container">
+                    <div class="img-comp-img">
+                      <img src="C:\Users\Marcin\Documents\GitHub\Laur\mezoterapia_efekty-705x456v2.jpg" width="600" height="400" style="overflow: hidden">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                      <img src="C:\Users\Marcin\Documents\GitHub\Laur\mezoterapia_efekty-705x456v1.jpg" width="600" height="400" style="overflow: hidden">
+                    </div>
+                  </div>
+    </div>
+
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div id="adres">
+                <span>Nasz adres:</span><br>
+                ul.Xxxxxx 21<br>
+                33-412 Łódź<br>
+                <br>
+                <span>Pracujemy:</span><br>
+                pn-pt od XX:XX do XX:XX
+            </div>
+            <div id="zapis">
+                    <span>Zapisy:</span><br>
+                    111 111 111<br>
+                </div>
+
+
+        </div>
+    </div>
+
+    <script>
+            initComparisons();
+    </script>
+</body>
+</html>

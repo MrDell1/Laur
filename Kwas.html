@@ -1,0 +1,149 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laur Estetic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+<script>
+        function initComparisons() {
+          var x, i;
+          x = document.getElementsByClassName("img-comp-overlay");
+          for (i = 0; i < x.length; i++) {
+            compareImages(x[i]);
+          }
+          function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchstop", slideFinish);
+            function slideReady(e) {
+              e.preventDefault();
+              clicked = 1;
+              window.addEventListener("mousemove", slideMove);
+              window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+              clicked = 0;
+            }
+            function slideMove(e) {
+              var pos;
+              if (clicked == 0) return false;
+              pos = getCursorPos(e)
+              if (pos < 0) pos = 0;
+              if (pos > w) pos = w;
+              slide(pos);
+            }
+            function getCursorPos(e) {
+              var a, x = 0;
+              e = e || window.event;
+              a = img.getBoundingClientRect();
+              x = e.pageX - a.left;
+              x = x - window.pageXOffset;
+              return x;
+            }
+            function slide(x) {
+              img.style.width = x + "px";
+              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+          }
+        }
+        </script>
+<body>
+    <div id="main">
+        <nav>
+            <div class="logo">
+                <div id="logo"><a href="index.html"><img src="logo1.png"></a></div>
+            </div>
+            <ul>
+                <li><a href="O_Gabinecie.html">O Gabinecie</a></li>
+                <li><a href="Oferta.html">Oferta</a></li>
+                <li><a href="">Promocje</a></li>
+                <li><a href="">Dla pacjenta</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+            <div class="tel">
+                <div id="tel">
+                    Umów wizytę<br>
+                    <span>+ 48 697 001 097</span><br>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="container">
+        <div id="title"><span>Kwas hialuronowy</span></div>
+    <div id="botox">
+        <div style="margin: 30px">   
+           <span>Kwas hialuronowy</span> jest substancją naturalnie występującą w naszym organizmie: w ciele szklistym oka, w stawach, w gojących się ranach, w pępowinie oraz w innych tkankach organizmów dojrzałych. 56% całego kwasu hialuronowego znajduje się w skórze, wypełnia on przestrzenie międzykomórkowe. Dzięki zdolności wiązania dużych ilości wody (1 cząsteczka kwasu hialuronowego jest w stanie związać ok 250 cząsteczek wody) zapewnia prawidłowe nawilżenie skóry, sprężystość, jędrność.
+        </div>
+        <div style="margin: 30px">
+            Wraz z upływem lat, a także pod wpływem czynników zewnętrznych (słońce, dym tytoniowy, klimatyzacja) skóra traci endogenny kwas hialuronowy co powoduje jej gorszy wygląd: utratę jędrności, spadek nawilżenia, pojawiające się linie i bruzdy. Aby poprawić stan skóry musimy dostarczyć jej kwasu hialuronowego z zewnątrz w postaci preparatów wypełniających. Niewielka ilość żelu wypełniającego wystarczy aby odpowiednio unieść tkankę,<span> wygładzając w ten sposób średnie jak i głębokie zmarszczki.</span> Po wstrzyknięciu żel można łatwo modelować i rozprowadzać, zapewnia to naturalny wygląd. Efekty widoczne są zaraz po zabiegu i utrzymują się od 4-12 miesięcy.
+        </div>
+        <div style="margin: 30px">
+            Przy użyciu preparatów kwasu hialuronowego można także wykonywać zabiegi<span> poprawiające wygląd ust</span> – samej czerwieni wargowej i okolicy okołowargowej. Zabiegi polecane są pacjentom z wąską czerwienią wargową, z niesymetrycznymi wargami, skarżącymi się na suchość ust, pacjentom z opadającymi kącikami ust i zmarszczkami wokół ust. W zależności od oczekiwań pacjenta i zastosowanego preparatu efekt może sprowadzać się do powiększenia ust lub dawać tylko większe nawilżenie i ujędrnienie. Efekt zabiegu utrzymuje się 6-12 miesięcy, każdy kolejny zabieg wydłuża czas utrzymywania się kwasu hialuronowego w tkankach.
+            Zabiegi poprawiające wygląd ust wykonuje się w znieczuleniu stomatologicznym lub w znieczuleniu kremem Emla.
+        </div>
+        <div style="margin: 30px">
+            Wraz z upływem czasu obserwujemy zmiany w naszej twarzy, pojawiają się nie tylko drobne, a później głębsze zmarszczki w okolicy oczu, ust i na czole ale głębokie bruzdy w okolicy nosowo-wargowej, poniżej kątów ust, zagłębienia w okolicy skroniowej, nierówna linia żuchwy.
+        </div>
+        <div style="margin: 30px">
+            To stopniowe zmiany objętości spowodowane zanikiem podskórnej tkanki tłuszczowej. Użycie żelu hialuronowego pozwala odzyskać utraconą objętość tkanek ok. podoczodołowej, fałdów nosowo-wargowych, pozwala unieść opadające kąciki ust, wyrównać linie żuchwy. Zabiegi<span> modelowania twarzy</span> kwasem hialuronowym są całkowicie bezpieczne, ponieważ kwas hialuronowy jest substancją biokompatybilną, czyli naturalnie występującą w skórze oraz biodegradowalną, czyli zanika samoistnie po 9-12 miesiącach.
+        </div>
+        <div style="margin: 30px">
+            Większość zabiegów modelowania twarzy wykonuje się obecnie<span> kaniulą </span> – miękką, okrągło zakończoną igłą, tzw. soft-filling. Podczas tego zabiegu istnieje mniejsze ryzyko wystąpienia zasinień niż przy użyciu tradycyjnej igły. Przy użyciu kaniuli wykonuje się także zabiegi<span> poprawiające wygląd rąk.</span> Ręce starzeją się najszybciej, najbardziej zdradzają upływ czasu, jest to spowodowane prawie całkowitym brakiem podskórnej tkanki tłuszczowej oraz działaniem niekorzystnych czynników zewnętrznych. Skóra rąk staje się sucha, wiotka, pokryta zmarszczkami i plamami posłonecznymi. Uzupełniając zanikający, endogenny kwas hialuronowy przywracamy skórze rąk właściwe nawilżenie, napięcie i jędrność.  </div>
+    </div>
+
+    <div id="comparison">
+        <div style="height: 30px">
+            <div style="float: left">Po</div>
+            <div style="float: right">Przed</div>
+        </div>
+            <div class="img-comp-container">
+                    <div class="img-comp-img">
+                      <img src="C:\Users\Marcin\Documents\GitHub\Laur\kwas-h-przedpo2V1.png" width="600" height="400">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                      <img src="C:\Users\Marcin\Documents\GitHub\Laur\kwas-h-przedpo2v2.png" width="600" height="400">
+                    </div>
+                  </div>
+    </div>
+
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div id="adres">
+                <span>Nasz adres:</span><br>
+                ul.Xxxxxx 21<br>
+                33-412 Łódź<br>
+                <br>
+                <span>Pracujemy:</span><br>
+                pn-pt od XX:XX do XX:XX
+            </div>
+            <div id="zapis">
+                    <span>Zapisy:</span><br>
+                    111 111 111<br>
+                </div>
+
+
+        </div>
+    </div>
+
+    <script>
+            initComparisons();
+    </script>
+</body>
+</html>
