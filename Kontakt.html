@@ -9,6 +9,7 @@
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?render=6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 <body>
@@ -53,11 +54,11 @@
             <label for="subcjet">Twoja wiadomość</label>
             <textarea type="text" id="subcjet" name="subcjet" placeholder="Co chcesz wiedziec?" style="height:200px"></textarea>
             <input type="Submit" value="Wyślij">
-            <script>
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute('reCAPTCHA_site_key', {action: 'homepage'});
-                    });
-            </script>
+        </form>
+        <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                <br/>
+                <input type="submit" value="Submit">
         </form>
     </div>
 
