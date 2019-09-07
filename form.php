@@ -19,7 +19,7 @@ if(isset($_POST['g-recaptcha-response'])){
     $captcha=$_POST['g-recaptcha-response'];
 }
 if(!$captcha){
-    echo'Sprawdź captcha';
+    echo'<p>Sprawdź captcha</p>';
     exit;
 }
 $secretKey = "6LenNrcUAAAAAE0kfbKeNDiCcMhUVZAli9ezU0m6";
@@ -30,8 +30,8 @@ $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
 $response = file_get_contents($url);
 $responseKey = json_decode($response,true);
 if($responseKey["success"]){
-    echo'Dzieki';
+    echo'<p>Dzieki</p>';
 }
 else{
-    echo'spamer';
+    echo'<p>spamer</p>';
 }
