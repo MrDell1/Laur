@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0"></script>
 </head>
 <body>
     <div id="main">
@@ -32,13 +33,33 @@
     </div>
     <div id="container">
         <div id="title"><span>Kontakt</span></div>
-
-
         <div id="about">
-            <div class="about">
+            <div class="about" style="margin-bottom: 30px">
                     Jeżeli masz pytania związane z opisanymi zabiegami, nie wszystko jest dla Ciebie zrozumiałe, nie wiesz, który zabieg byłby dla Ciebie wskazany napisz lub zadzwoń, odpowiem na każde pytanie.
             </div>
         </div>
+    <div id="kontakt">
+        <form>
+            <label for="fname">Imię</label>
+            <input type="text" id="fname" name="Imię" placeholder="Podaj swoje imię">
+            <label for="lname">Nazwisko</label>
+            <input type="text" id="lname" name="Nazwisko" placeholder="Podaj swoje nazwisko">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Podaj swój e-mail">
+            <label for="topic">Temat</label>
+            <input type="text" id="topic" name="temat" placeholder="Podaj temat">
+            <label for="subcjet">Twoja wiadomość</label>
+            <textarea type="text" id="subcjet" name="subcjet" placeholder="Co chcesz wiedziec?" style="height:200px"></textarea>
+            <input type="Submit" value="Wyślij">
+            <script>
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0', {action: 'homepage'}).then(function(token) {
+                       ...
+                    });
+                });
+                </script>
+        </form>
+    </div>
 
     </div>
     <div id="footer">
