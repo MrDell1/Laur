@@ -22,7 +22,7 @@ if(!$captcha){
     echo'<h1>Sprawdź captcha</h1>';
     exit;
 }
-$secretKey = "6LenNrcUAAAAAE0kfbKeNDiCcMhUVZAli9ezU0m6";
+$secretKey = "6LenNrcUAAAAABpF2K8-N3BVP0OIw_O8vb_UmIDP";
 $ip = $_SERVER['REMOTE_ADDR'];
 $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) . '&response=' . urlencode($captcha);
 $response = file_get_contents($url);
