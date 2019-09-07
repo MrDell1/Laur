@@ -9,8 +9,10 @@
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?render=6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0"></script>
+    
 </head>
 <body>
+    
     <div id="main">
         <nav>
             <div class="logo">
@@ -52,12 +54,10 @@
             <textarea type="text" id="subcjet" name="subcjet" placeholder="Co chcesz wiedziec?" style="height:200px"></textarea>
             <input type="Submit" value="Wyślij">
             <script>
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0', {action: 'homepage'}).then(function(token) {
-                       ...
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute('reCAPTCHA_site_key', {action: 'homepage'});
                     });
-                });
-                </script>
+            </script>
         </form>
     </div>
 
@@ -80,5 +80,12 @@
 
             </div>
         </div>
+        <script>
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LcCNrcUAAAAALPbcdSw09oq51wnqLP36PRsTEo0', {action: 'homepage'}).then(function(token) {
+                       ...
+                    });
+                });
+                </script>
 </body>
 </html>
