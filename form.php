@@ -35,3 +35,4 @@ if($responseKey["success"]){
 else{
     echo'<h1>spamer</h1>';
 }
+?>
