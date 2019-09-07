@@ -25,7 +25,7 @@ if(!$captcha){
 $secretKey = "6LenNrcUAAAAAE0kfbKeNDiCcMhUVZAli9ezU0m6";
 $ip = $_SERVER]['REMOTE_ADDR'];
 $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LenNrcUAAAAAE0kfbKeNDiCcMhUVZAli9ezU0m6' 
-.urlencode($secretKey) . '&response='6LenNrcUAAAAABpF2K8-N3BVP0OIw_O8vb_UmIDP
+.urlencode($secretKey) . '&response='
 .urlencode($captcha);
 $response = file_get_contents($url);
 $responseKey = json_decode($response,true);
