@@ -1,4 +1,7 @@
 <?php
+
+echo 'ok';
+/*
 $fname;$lname;$email;$topic;$subject;$captcha
 if(isset($_POST['fname'])){
     $lname=$_POST['fname'];
@@ -33,4 +36,4 @@ if($responseKey["success"]){
 else{
     echo'<h1>spamer</h1>';
 }
-?>
+*/
